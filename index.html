@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOP-RPS</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <script>
+      alert("Welcome to Rock Paper Scissors. Press Enter to continue.");
+
       let playerScore = 0;
       let computerScore = 0;
       let playerSelection;
@@ -21,6 +24,7 @@
           alert(playRound(playerSelectionLower, computerSelectionRandom));
         }
         matchWinner();
+        alert("Refresh the page to play again.");
       }
 
       function computerPlay(n) {
@@ -69,14 +73,14 @@
         ) {
           return "It is a tie!";
         } else {
-          return "Something went wrong.";
+          return "Please enter a valid option.";
         }
       }
 
       function matchWinner() {
         if (playerScore == computerScore) {
           alert(
-            `This match was a tie. Both the player and computer had ${playerScore} points.`
+            `This match was a tie. Both the player and computer had ${playerScore} point\(s\).`
           );
         } else if (playerScore > computerScore) {
           alert(
